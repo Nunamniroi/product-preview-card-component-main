@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Frontend Mentor/product-preview-card-component-main/design"
+		},
+		{
+			"path": "../../Frontend Mentor/product-preview-card-component-main/images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "product-preview-card-component-main"
+	}
+}
