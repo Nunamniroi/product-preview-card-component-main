@@ -118,7 +118,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
-  gap: 0.5rem;
+  gap: 0.75rem;
   justify-content: center;
   align-items: center;
 
@@ -131,6 +131,13 @@ body {
   font-size: .925rem;
 }
 
+.button[data-icon="shopping-card"]::before {
+  content: "";
+  background-image: url(images/icon-cart.svg);
+  width: 15px;
+  height: 16px;
+}
+
 .button:is(:hover, :focus) {
   background-color: var(--clr-primary-500);
 }
@@ -139,9 +146,19 @@ body {
 .product {
   --content-padding: 1.5rem;
   --content-spacing: 1rem;
+
+  display: grid;
   background-color: var(--clr-neutral-100);
   border-radius: 0.5rem;
   overflow: hidden;
+  max-width: 600px;
+}
+
+@media (min-width: 600px) {
+  .product{
+  --content-padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .product__content {
@@ -163,7 +180,6 @@ body {
 }
 
 .product__price {
-  border: 3px solid red;
   font-size: 2rem;
   font-family: var(--ff-accent);
   color: var(--clr-primary-400);
